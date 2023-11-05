@@ -14,12 +14,12 @@ const sum = function(arr) {
   return sum
 };
 
-const multiply = function(...arg) {
-  let prodcut=0
-  for(let i = arg.length-1; i>=0; i--){
-    prodcut *= arg[i]
+const multiply = function(values) {
+  let product=1
+  for(let i = 0; i<values.length; i++){
+    product *= values[i]
   }
-  return prodcut
+  return product
 };
 
 const power = function(number, exponent) {
@@ -28,10 +28,11 @@ const power = function(number, exponent) {
 
 const factorial = function(n) {
 	// formula for factorial n! = n(n-1)(n-2)(n-3)...1
-  let result = 0
+  let result = 1
   for (let i = n; i>0; i--){
     result *=i
   }
+  return result
 };
 
 // Do not edit below this line
