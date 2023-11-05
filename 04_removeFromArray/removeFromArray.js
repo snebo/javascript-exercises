@@ -1,5 +1,5 @@
 const removeFromArray = function(Arr, ...args) {
-    for(let i=0; i < Arr.length; i++){
+    for(let i = Arr.length-1; i >=0; i--){
         let value=0
         // loops through the arrary
         console.log("arrary: "+Arr[i])
@@ -7,20 +7,12 @@ const removeFromArray = function(Arr, ...args) {
         while(value < args.length){
             console.log(args[value]);
             if(Arr[i] === args[value]){
-                Arr.splice(i, 1)
-                // to fix the skipped index, we check again
-                if(Arr[i] === (args[value])){
-                    Arr.splice(i,1)
-                }
+                console.log("match")
+                Arr.splice(i,1)
             }
             value++
         }
-        // for(let j=0; j<args.length; j++){
-        //     console.log("value: "+args[j])
-        //     if (Arr[i] === args[j]){
-        //         Arr.splice(i,1)
-        //     }
-        // }
+        // it seems after splicing, it rearranges the index and skips the next index
     }
     return Arr
 };
