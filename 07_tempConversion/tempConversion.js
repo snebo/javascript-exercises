@@ -1,4 +1,5 @@
 const convertToCelsius = function(degree) {
+  // formula for temp_conversion is x-32 *(5/9)
   degree = Number(((degree-32)*(5/9)).toFixed(1))
   return degree
 };
